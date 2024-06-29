@@ -1,39 +1,64 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# Log.it() - A Logging Package for Flutter and Dart
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
+## Overview
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+`Log.it()` is a comprehensive logging package designed for Flutter and Dart applications. It provides a flexible and customizable logging solution with various log levels, timestamps, and color-coded outputs for better readability. This package aims to simplify the logging process and enhance the debugging experience.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- **Multiple Log Levels**: Supports verbose, debug, info, warning, error, success, and critical log levels.
+- **Color-Coded Outputs**: Different colors for different log levels for easy visual distinction.
+- **Timestamped Logs**: Includes a timestamp for each log entry to track when the log was created.
+- **Source Location**: Displays the source file and line number where the log was called.
+- **Customizable**: Easily extendable and customizable to fit different project needs.
 
-## Getting started
+## Installation
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+To install `Log.it()`, add the following dependency to your `pubspec.yaml` file:
+
+```yaml
+dependencies:
+  log_it: ^1.0.0
+
+```
+
+Then, run `flutter pub get` to install the package.
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+Here's a basic example of how to use `Log.it()` in your Dart or Flutter application:
 
-```dart
-const like = 'sample';
+```import 'package:log_it/log_it.dart';void main() {
+import 'package:log_it/log_it.dart';void main() {
+
+Log.it("This is an info message.");
+Log.it("This is a debug message.", level: LogLevels.debug);
+Log.it("This is a warning message.", level: LogLevels.warning);
+Log.it("This is an error message.", level: LogLevels.error);
+Log.it("This is a success message.", level: LogLevels.success);
+Log.it("This is a critical message.", level: LogLevels.critical);
+
+}
+   
 ```
 
-## Additional information
+### Customizing Log Levels
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+You can customize the log levels and their colors by modifying the `_logLog` method in the `Log` class.
+
+## Contributing
+
+Contributions are welcome! Here's how you can contribute to `Log.it()`:
+
+1. **Fork the repository** on GitHub.
+2. **Clone the forked repository** to your local machine.
+3. **Create a new branch** for your changes.
+4. **Make your changes** and commit them to your branch.
+5. **Push your changes** to your fork on GitHub.
+6. **Submit a pull request** to the original repository.
+
+Please ensure your code adheres to the existing style for consistency.
+
+## License
+
+`Log.it()` is released under the MIT License. See the [LICENSE](https://github.com/theinshort/log_it/blob/main/LICENSE) file for more details.

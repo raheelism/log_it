@@ -1,7 +1,7 @@
 name: log_it
-description: "A new Flutter package project."
+description: "A flutter package for colorful logging with more details."
 version: 0.0.1
-homepage:
+homepage: https://github.com/theinshort/log_it
 
 environment:
   sdk: '>=3.4.3 <4.0.0'
